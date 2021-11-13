@@ -1,0 +1,38 @@
+.front {
+	display: flex;
+	min-height: 500px;
+	max-height: 500px;
+	min-width: 350px;
+	max-width: 350px;
+	background-color: #0d253f;
+	border-radius: 10px;
+	color: white;
+	justify-content: flex-start;
+	align-items: flex-end;
+	box-shadow: rgba(black, 0.66) 0 30px 60px 0;
+	-webkit-backface-visibility: hidden;
+	-moz-backface-visibility: hidden;
+	backface-visibility: hidden;
+	cursor: pointer;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	user-select: none;
+	
+	&__bottombg {
+		display: flex;
+		border-radius: 10px;
+		background: linear-gradient(180deg, rgba(#242424, 0) 0%, #242424 100%);
+		width: 100%;
+	}
+	
+	&__content {
+		width: 100%;
+		padding: 20px 20px;
+
+		&__last {
+			display: flex;
+			justify-content: space-between;
+		}
+	}
+
+}

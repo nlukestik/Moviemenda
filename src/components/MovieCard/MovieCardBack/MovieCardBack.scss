@@ -1,0 +1,67 @@
+.back {
+	display: flex;
+	min-height: 500px;
+	max-height: 500px;
+	min-width: 350px;
+	max-width: 350px;
+	background-color: #0d253f;
+	border-radius: 10px;
+	color: white;
+	justify-content: flex-start;
+	box-shadow: rgba(black, 0.66) 0 30px 60px 0;
+	-webkit-backface-visibility: hidden;
+	-moz-backface-visibility: hidden;
+	backface-visibility: hidden;
+	cursor: pointer;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	user-select: none;
+
+	&__content {
+		width: 100%;
+		padding: 20px 20px;
+
+		&__description {
+			&-t {
+				margin-bottom: 0;
+			}
+			&-c {
+				margin-top: 10px;
+				text-align: justify;
+				max-height: 200px;
+				overflow-y: scroll;
+			}
+		}
+		
+		&__cast {
+			&-t {
+				margin-top: 2em;
+				margin-bottom: 0;
+			}
+			&-c {
+				overflow-y: scroll;
+				max-height: 120px;
+				margin-top: 10px;
+			}
+		}
+
+		::-webkit-scrollbar {
+			width: 7px;
+		}
+		
+		::-webkit-scrollbar-track {
+			background: transparent;
+		}
+		
+		::-webkit-scrollbar-thumb {
+			border-radius: 50px;
+			background: rgba(#fff,0.1);
+		}
+		
+		::-webkit-scrollbar-thumb:hover {
+			background: rgba(#fff,0.2);
+		}
+
+	}
+
+}
