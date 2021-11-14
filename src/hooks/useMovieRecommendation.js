@@ -2,7 +2,7 @@ import { useEffect, useState } from "react"
 import { getTopRatedMovies } from "../api/tmdbApi"
 
 export function useMovieRecommendation() {
-	const [ topRatedMovie, setTopRatedMovie ] = useState([])
+	const [ movieRecommendation, setMovieRecommendation ] = useState([])
 	const [ loading, setLoading ] = useState(true)
 	const random = Math.floor(Math.random() * 20)
 
@@ -10,7 +10,7 @@ export function useMovieRecommendation() {
 
 		try {
 			const movies = await getTopRatedMovies()
-			setTopRatedMovie(movies[random])
+			setMovieRecommendation(movies[random])
 		} 
 		catch (err) {
 			alert(err)
@@ -24,5 +24,5 @@ export function useMovieRecommendation() {
 		getRecommendation()
 	})
 
-	return {topRatedMovie, loading}
+	return {movieRecommendation, loading}
 }

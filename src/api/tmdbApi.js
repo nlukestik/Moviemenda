@@ -10,3 +10,14 @@ export async function getTopRatedMovies() {
 		alert(err)
 	}
 }
+
+export async function getMovieDetails(id) {
+	try {
+		const res = await fetch(`${window.location.protocol}//api.themoviedb.org/3/movie/${id}?api_key=${process.env.REACT_APP_MOVIE_DB_API_KEY}`)	
+		const data = res.json
+		return data
+	} 
+	catch (err) {
+		alert(err)
+	}	
+}
