@@ -2,13 +2,13 @@ import { useEffect, useState } from "react";
 import { getMovieDetails } from "../api/tmdbApi";
 
 export function useMovieDetails(movieID) {
-	const [details, setDetails] = useState()
-	const [loading, setLoading] = useState(true)
-
+	const [ details, setDetails ] = useState()
+	const [ loading, setLoading ] = useState(true)
+	
 	async function movieDetails(id) {
 		try {
-			const movies = await getMovieDetails(id)
-			setDetails(movies)
+			const data = await getMovieDetails(id)
+			setDetails(data)
 		} 
 		catch (err) {
 			alert(err)
@@ -17,9 +17,9 @@ export function useMovieDetails(movieID) {
 			setLoading(false)
 		}
 	}
-
+	
 	useEffect(() => {
-		movieDetails(movieID)
+		movieDetails(movieID.id)
 	})
 
 	return {details, loading}

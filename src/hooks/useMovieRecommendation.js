@@ -1,28 +1,29 @@
 import { useEffect, useState } from "react"
 import { getTopRatedMovies } from "../api/tmdbApi"
 
-export function useMovieRecommendation() {
-	const [ movieRecommendation, setMovieRecommendation ] = useState([])
-	const [ loading, setLoading ] = useState(true)
+export function useMovieRecommendation(count) {
+	const [ movieID, setMovieID ] = useState()
+	const [loading, setLoading] = useState(true)
 	const random = Math.floor(Math.random() * 20)
 
 	async function getRecommendation() {
 
 		try {
 			const movies = await getTopRatedMovies()
-			setMovieRecommendation(movies[random])
+			setMovieID(movies[random].id)
 		} 
 		catch (err) {
 			alert(err)
 		}
-		finally{
+		finally {
 			setLoading(false)
 		}
 	}
 
 	useEffect(() => {
 		getRecommendation()
-	})
+	// eslint-disable-next-line react-hooks/exhaustive-deps
+	}, [count])
 
-	return {movieRecommendation, loading}
+	return {movieID, loading}
 }
