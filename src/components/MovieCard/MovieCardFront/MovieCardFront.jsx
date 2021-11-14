@@ -4,6 +4,8 @@ export default function MovieCardFront({movie}) {
 	const moviePoster = movie ? movie.poster_path : null
 
 	return(
+		<div className="bkg">
+
 		<div 
 			className="front"
 			style={{ background: moviePoster ? 
@@ -26,6 +28,7 @@ export default function MovieCardFront({movie}) {
 					</div>
 				</div>
 			</div>
+		</div>
 		</div>
 	)
 };

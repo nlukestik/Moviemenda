@@ -5,6 +5,7 @@
 	min-width: 350px;
 	max-width: 350px;
 	border-radius: 10px;
+	background-color: #0d253f;
 	color: white;
 	justify-content: flex-start;
 	align-items: flex-end;
@@ -38,4 +39,10 @@
 		}
 	}
 
+}
+
+.bkg {
+	height: 100%;
+	background: #0d253f;
+	border-radius: 10px;
 }

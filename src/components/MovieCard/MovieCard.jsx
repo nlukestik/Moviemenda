@@ -3,7 +3,7 @@ import MovieCardFront from "./MovieCardFront/MovieCardFront";
 import MovieCardBack from "./MovieCardBack/MovieCardBack";
 import "./MovieCard.scss"
 import { useMovieDetails } from "../../hooks/useMovieDetails";
-import { useMovieCast } from "../../hooks/useMovieCast";
+// import { useMovieCast } from "../../hooks/useMovieCast";
 
 export default function MovieCard(id) {
 	const [ isFlipped, setIsFlipped ] = useState(false)
