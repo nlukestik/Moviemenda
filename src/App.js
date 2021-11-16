@@ -19,13 +19,16 @@ function App() {
   return (
     <div className="root">
       {loading ? 
-        <></>
-        : <MovieCard id={movieID} isCardFront={cardFront} setToCardFront={setCardFront} />
+        <div className="loadingCard"/>
+        : 
+        <> 
+          <MovieCard id={movieID} isCardFront={cardFront} setToCardFront={setCardFront} />
+          <div className="buttons">
+            <button className="buttons__dice" onClick={handleDice}><Emoji symbol="🎲" /></button>
+          </div>
+        </>
       }
 
-      <div className="buttons">
-        <button className="buttons__dice" onClick={handleDice}><Emoji symbol="🎲" /></button>
-      </div>
 
       <div className="attr">
         <APIAttribution />

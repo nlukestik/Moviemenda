@@ -15,7 +15,7 @@ export default function MovieCard({id, isCardFront, setToCardFront}) {
 	return(
 
 		loading ? 
-			<></> 
+			<div className="loadingCard" /> 
 		: 
 			<div className={`card ${!isCardFront ? "flipped" : ""}`}>
 				<div className="card__front" onClick={handleFlip}>
