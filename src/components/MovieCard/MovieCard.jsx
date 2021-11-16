@@ -1,4 +1,3 @@
-import { useState } from "react";
 import MovieCardFront from "./MovieCardFront/MovieCardFront";
 import MovieCardBack from "./MovieCardBack/MovieCardBack";
 import "./MovieCard.scss"

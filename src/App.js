@@ -3,6 +3,7 @@ import APIAttribution from "./components/APIAttribution/APIAttribution";
 import MovieCard from "./components/MovieCard/MovieCard";
 import { useMovieRecommendation } from "./hooks/useMovieRecommendation";
 import "./App.scss"
+import Emoji from "./components/Emoji";
 
 function App() {
   const [count, setCount] = useState(0)
@@ -23,7 +24,7 @@ function App() {
       }
 
       <div className="buttons">
-        <button onClick={handleDice}>+</button>
+        <button className="buttons__dice" onClick={handleDice}><Emoji symbol="🎲" /></button>
       </div>
 
       <div className="attr">
