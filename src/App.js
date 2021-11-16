@@ -5,13 +5,13 @@ import { useMovieRecommendation } from "./hooks/useMovieRecommendation";
 import "./App.scss"
 
 function App() {
- 
   const [count, setCount] = useState(0)
+  const [cardFront, setCardFront] = useState(true)
   const {movieID, loading} = useMovieRecommendation(count)
   
 
   const handleDice = () => {
-    
+    setCardFront(true)
     setCount(count+1)
   }
   
@@ -20,7 +20,7 @@ function App() {
       <button onClick={handleDice}>+</button>
       {loading ? 
         <></>
-        : <MovieCard id={movieID} />
+        : <MovieCard id={movieID} isCardFront={cardFront} setToCardFront={setCardFront} />
       }
       <APIAttribution />
     </>

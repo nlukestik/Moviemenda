@@ -19,7 +19,7 @@ export function useMovieCast(movieID) {
 	}
 	
 	useEffect(() => {
-		movieCast(movieID.id)
+		movieCast(movieID)
 	})
 
 	return {cast, loadingCast}

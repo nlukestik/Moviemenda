@@ -19,7 +19,7 @@ export function useMovieDetails(movieID) {
 	}
 	
 	useEffect(() => {
-		movieDetails(movieID.id)
+		movieDetails(movieID)
 	})
 
 	return {details, loading}
