@@ -1,14 +1,7 @@
-.root {
-	position: fixed;
-	width: 100%;
-	display: flex;
-	justify-content: flex-end;
-	bottom: 0;
-}
-
 .attribution {
 	display: flex;
 	padding: 0 1em 1em;
+  justify-content: flex-end;
 
 	&__logo {
 		-webkit-animation: scale-in-center 0.2s cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.2s both;
@@ -16,7 +9,7 @@
 	}
 	
 	&__notice{
-		margin: 38px 0 0;
+		margin: 34px 0 0;
 		display: none;
 		color: white;
 		font-size: 11px;

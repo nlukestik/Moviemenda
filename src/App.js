@@ -16,14 +16,20 @@ function App() {
   }
   
   return (
-    <>
-      <button onClick={handleDice}>+</button>
+    <div className="root">
       {loading ? 
         <></>
         : <MovieCard id={movieID} isCardFront={cardFront} setToCardFront={setCardFront} />
       }
-      <APIAttribution />
-    </>
+
+      <div className="buttons">
+        <button onClick={handleDice}>+</button>
+      </div>
+
+      <div className="attr">
+        <APIAttribution />
+      </div>
+    </div>
   )
 }
 

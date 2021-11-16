@@ -6,7 +6,7 @@ import "./APIAttribution.scss"
 
 export default function APIAttribution() {
 	return(
-		<div className="root">
+		<>
 			<div className="attribution">
 				<div className="attribution__logo">
 					{isMobile(769) ? 
@@ -19,6 +19,6 @@ export default function APIAttribution() {
 					This product uses the TMDB API but is not endorsed or certified by TMDB.
 				</p>
 			</div>
-		</div>
+		</>
 	)
 };
